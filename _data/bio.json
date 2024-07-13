@@ -1,13 +1,13 @@
 {
   "basics": {
-    "name": "Molly Maluhia",
+    "name": "Venkata Seetha Ram Mohan Thota",
     "label": "Student",
     "picture": "https://github.com/MohanThota.png",
     "email": "vthota14@asu.edu",
     "phone": "602-516-5892",
     "website": "https://MohanThota.github.io",
     "summary": "I am studying for a M.S. in Robotics and Autonomous Systems in Arizona State University. I expect to graduate in Fall, 2024.",
-    "location": { "address": "", "postalCode": "85281", "city": "Tempe", "countryCode": "USA", "region": "Arizona" },
+    "location": { "address": "1215 E Vista Del Cerro Dr.", "postalCode": "85281", "city": "Tempe", "countryCode": "USA", "region": "Arizona" },
     "profiles": [
       { "network": "github", "username": "mmaluhia", "url": "http://github.com/changeme" },
       { "network": "linkedin", "username": "mollymaluhia", "url": "http://linkedin.com/in/changeme" },
@@ -16,8 +16,8 @@
     ]
   },
   "interests": [
-    { "name": "Interactive media" },
-    { "name": "Neuromorphic Computing" },
+    { "name": "Computer Vision" },
+    { "name": "Real Time Signal Processing" },
     { "name": "Drones" },
     { "name": "Robotics" },
     { "name": "3D Printing" }
@@ -25,7 +25,7 @@
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "Java", "Javascrip", "Assembly", "Common Lisp" ]
+      "keywords": [ "C", "C++", "MATLAB",  "Assembly", "Python" ]
     },
     {
       "name": "Toolsets/OS",
