@@ -40,7 +40,7 @@
       "studyType": "M.S.",
       "startDate": "2023-09-01",
       "endDate": "Present",
-      "courses": [: "Robotics Systems", "Vehicle Dynamics and Control", "Principles of Systems Engineering", "Mathematical Foundation for Machine Learning", "Real Time Digital Signal Processing" , "Multi-Robot Systems"
+      "courses": [ "Robotics Systems", "Vehicle Dynamics and Control", "Principles of Systems Engineering", "Mathematical Foundation for Machine Learning", "Real Time Digital Signal Processing" , "Multi-Robot Systems"
       ]
     }
   ],
