@@ -26,7 +26,7 @@
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "MATLAB",  "Assembly", "Python", "ROS", "OpenCV ]
+      "keywords": [ "C", "C++", "MATLAB",  "Assembly", "Python", "ROS", "OpenCV" ]
     },
     {
       "name": "Toolsets/OS",
