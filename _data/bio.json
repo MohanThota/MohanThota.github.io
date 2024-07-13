@@ -17,6 +17,7 @@
   },
   "interests": [
     { "name": "Computer Vision" },
+    { "name": "Artificial Intelligence" },
     { "name": "Real Time Signal Processing" },
     { "name": "Drones" },
     { "name": "Robotics" },
@@ -25,21 +26,21 @@
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "MATLAB",  "Assembly", "Python" ]
+      "keywords": [ "C", "C++", "MATLAB",  "Assembly", "Python", "ROS", "OpenCV ]
     },
     {
       "name": "Toolsets/OS",
-      "keywords": [ "MacOS", "Ubuntu", "Git/GitHub", "g++", "TI LaunchPad" ]
+      "keywords": [  "Ubuntu", "Git/GitHub", "g++", "STM32", "CarSIM" , "SIMULINK" ]
     }
   ],
   "education": [
     {
-      "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Spring, 2018)",
-      "studyType": "B.S.",
-      "startDate": "2013-09-01",
+      "institution": "Arizona State University, Tempe",
+      "area": "Robotics and Autonomous Systems (expected Fall, 2025)",
+      "studyType": "M.S.",
+      "startDate": "2023-09-01",
       "endDate": "Present",
-      "courses": [
+      "courses": [: "Robotics Systems", "Vehicle Dynamics and Control", "Principles of Systems Engineering", "Mathematical Foundation for Machine Learning", "Real Time Digital Signal Processing" , "Multi-Robot Systems"
       ]
     }
   ],
