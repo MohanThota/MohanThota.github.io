@@ -11,7 +11,7 @@ weight: 2
 Hi, I am <b>Venkata Seetha Ram Mohan Thota</b> :wave:.<br>
 
 
-I graduated from the M.S. <b>Robotics and Auotnomous Systems</b> program at Arizona State University. Before Arizona State University, I received my Bachelor's degree in Electronics and Communications Engineering, where I developed various skills in embedded systems and electronics. I am interested in the <b>Autonomous Vehicle</b> industry, and my projects involve <b>Simulation</b><b>Perception</b>, <b>SLAM</b>, <b>Planning</b>, etc.
+I graduated from the M.S. <b>Robotics and Auotnomous Systems</b> program at Arizona State University. Before Arizona State University, I received my Bachelor's degree in Electronics and Communications Engineering, where I developed various skills in embedded systems and electronics. I am interested in the <b>Autonomous Vehicle</b> industry, and my projects involve <b>Simulation</b>,<b>Perception</b>, <b>SLAM</b>, <b>Planning</b>, etc.
 
 </font>
 
