@@ -8,9 +8,11 @@ weight: 2
 # **About Me**
 <br>
 <font size="+1">
-Hi, I am <b>Jiasen (Jason) Zheng</b> :wave:.<br>
+Hi, I am <b>Venkata Seetha Ram Mohan Thota</b> :wave:.<br>
 
-I am currently a student in the M.S. <b>Robotics</b> program at Northwestern University. Before Northwestern, I received my Bachelor's degree in Mechanical Engineering from Union College, where I developed various skills in mechanical design, engineering simulations, and mathematics. I am interested in the <b>Autonomous Vehicle</b> industry, and my projects involve <b>Perception</b>, <b>SLAM</b>, <b>Planning</b>, etc.
+
+I graduated from the M.S. <b>Robotics and Auotnomous Systems</b> program at Arizona State University. Before Arizona State University, I received my Bachelor's degree in Electronics and Communications Engineering, where I developed various skills in embedded systems and electronics. I am interested in the <b>Autonomous Vehicle</b> industry, and my projects involve <b>Simulation</b><b>Perception</b>, <b>SLAM</b>, <b>Planning</b>, etc.
+
 </font>
 
 <!-- <div class="row">
