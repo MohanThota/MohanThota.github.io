@@ -10,9 +10,9 @@ weight: 4
   <a
     target="_blank"
     class="align-middle link-primary mr-2 mr-lg-0 ml-lg-2"
-    href="/assets/VenkataSeethaRamMohanThota.pdf"
+    href="/assets/VenkataSeethaRamMohan_Thota.pdf"
     >Resume.pdf</a
   >
 </li>
 <br>
-<object data="{{ site.url }}{{ site.baseurl }}/assets/VenkataSeethaRamMohanThota.pdf" width="1200" height="1200" type="application/pdf"></object>
+<object data="{{ site.url }}{{ site.baseurl }}/assets/VenkataSeethaRamMohan_Thota.pdf" width="1200" height="1200" type="application/pdf"></object>
