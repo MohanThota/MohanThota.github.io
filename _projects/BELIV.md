@@ -1,11 +1,11 @@
 ---
-name: SCNEARIO BASED TESTING AND AUTOWARE
-tools: [C++, ROS, 3D SLAM, Calibration, PCL]
+name: SCENARIO BASED TESTING USING CARLA-ROS-AUTOWARE 
+tools: [ROS, AUTOWARE, CARLA , SCNEARIO RUNNER]
 image: https://jiasenzheng.github.io/assets/closure1.gif
 description: Developed a calibration ROS package to compute the extrinsic parameters between a LiDar and an RGB-D camera.    Performed 3D SLAM using RTAB-Map on a Jackal UGV and aligned the color pixel to the point cloud.
 ---
 
-# 3D SLAM and Point Cloud Colourisation
+# SCENARIO BASED TESTING USING CARLA-ROS-AUTOWARE
 <br>
 ### Brief overview
 <br>
