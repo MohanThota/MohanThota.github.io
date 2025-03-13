@@ -1,5 +1,5 @@
 ---
-name: 3D Object Detection and Pose Estimation
+name: Real Time Implementation of Image Processing Algorithms
 tools: [C++, ROS, Pytorch, PCL, OpenCV]
 image: https://jiasenzheng.github.io/assets/detection.gif
 description: Designed a computer vision setup and implemented software to detect objects and estimate their poses in 3D space.
