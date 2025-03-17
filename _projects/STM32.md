@@ -31,54 +31,54 @@ Implemented real-time image processing algorithms on STM32F407G-DISC1 microcontr
 #### 1. Thresholding Techniques
 **Global Thresholding (C Implementation):**
 
-void global_thresholding_c(uint8_t *x, uint32_t size, uint8_t threshold) {
-for(int i=0;i<size;i++) {
-x[i] = (x[i] >= threshold) ? 255 : 0;
-}
-}
+*void global_thresholding_c(uint8_t *x, uint32_t size, uint8_t threshold) {*
+*for(int i=0;i<size;i++) {*
+*x[i] = (x[i] >= threshold) ? 255 : 0;*
+*}*
+*}*
 
 
 **Band Thresholding (Hybrid Assembly):**
-attribute((naked)) void band_thresholding_hybrid(...) {
-__asm volatile(
-"PUSH {r4-r7,lr}\n\t"
-"MOV r4, #0\n\t"
-"loop: CMP r4,r1\n\t"
-"BGE exit\n\t"
-"LDRB r7,[r0]\n\t"
-"CMP r7,r3\n\t"
-"BGT loop1\n\t"
-"CMP r2,r7\n\t"
-"BGT loop1\n\t"
-"STRB r5,[r0], #1\n\t"
-"B loop2\n\t"
-// ... full assembly implementation
-);
+*attribute((naked)) void band_thresholding_hybrid(...) {*
+*__asm volatile(*
+*"PUSH {r4-r7,lr}\n\t"*
+*"MOV r4, #0\n\t"*
+*"loop: CMP r4,r1\n\t"*
+*"BGE exit\n\t"*
+*"LDRB r7,[r0]\n\t"*
+*"CMP r7,r3\n\t"*
+*"BGT loop1\n\t"*
+*"CMP r2,r7\n\t"*
+*"BGT loop1\n\t"*
+*"STRB r5,[r0], #1\n\t"*
+*"B loop2\n\t"*
+*// ... full assembly implementation*
+*);*
 
 
 
 #### 2. Gray Level Quantization
 **C Function with Right-Shift Optimization:**
-void gray_level_quantization_c(uint8_t *x, uint32_t size, uint8_t shift_factor) {
-for(int i=0;i<size;i++) {
-x[i] = x[i] >> shift_factor;
-}
-}
+*void gray_level_quantization_c(uint8_t *x, uint32_t size, uint8_t shift_factor) {*
+*for(int i=0;i<size;i++) {*
+*x[i] = x[i] >> shift_factor;*
+*}*
+*}*
 
 
 #### 3. Advanced Transformations
 **Negative Transformation (Hybrid Assembly):**
 
 attribute((naked)) void gray_level_transformation1_hybrid(...) {
-__asm volatile(
-"MOV r2,#0\n\t"
-"MOV r3,#255\n\t"
-"loopgl: LDRB r4,[r0]\n\t"
-"SUB r4,r3,r4\n\t"
-"STRB r4,[r0],#1\n\t"
-// ... full assembly implementation
-);
-}
+*__asm volatile(*
+*"MOV r2,#0\n\t"*
+*"MOV r3,#255\n\t"*
+*"loopgl: LDRB r4,[r0]\n\t"*
+*"SUB r4,r3,r4\n\t"*
+*"STRB r4,[r0],#1\n\t"*
+*// ... full assembly implementation*
+*);*
+*}*
 
 
 ### Key Results
