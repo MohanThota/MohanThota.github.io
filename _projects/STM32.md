@@ -1,84 +1,112 @@
 ---
 name: Real Time Implementation of Image Processing Algorithms
-tools: [C++, ROS, Pytorch, PCL, OpenCV]
+tools: [C++, Armv7, Assembly language, STM32, MATLAB]
 image: https://jiasenzheng.github.io/assets/detection.gif
-description: Designed a computer vision setup and implemented software to detect objects and estimate their poses in 3D space.
+description: Implemented real-time image processing algorithms on STM32F407G-DISC1 microcontroller for live video enhancement.
 ---
 
-# Point Cloud Object Detection and Pose Estimation
-<br>
-### Objective
-<br>
-**[Shape-Based Remote Manipulation](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2221571&HistoricalAwards=false) (NSF)**: We are building an operating interface coupled with a manipulator that promises communication across the distance barrier. 
-<br><br>
-**My Focus**: As the first stage of this project, I am responsible for developing a perception system to sense the manipulator’s environment.
-<br><br>
-**Goal**: This project aims to design a computer vision setup and implement software to detect objects and estimate their poses in 3D space.
-<br>
-### Video demo
-{% include elements/video.html id="uvhC8gluA9o" %}
-<br>
+# Real-Time Image Processing on Embedded Systems  
+**EEE404/591 Real Time DSP Project**  
+**Name:** Venkata Seetha Ram Mohan Thota  
+**ASU ID:** 1228491877  
+**Date:** March 2025  
 
-### Hardware
-* Intel Realsense Lidar L515
+## Project Overview
+Implemented real-time image processing algorithms on STM32F407G-DISC1 microcontroller for live video enhancement. Key features include:
 
-Intel realsense L515 uses a solid-state Lidar to sense depth. The Lidar can provide organized point clouds. It also has an RGB camera which is calibrated with the Lidar.
+- Thresholding techniques for image segmentation
+- Gray level quantization for memory optimization
+- Gray level transformations for contrast enhancement
+- Hybrid C/Assembly implementation for optimized performance
 
-### Pipeline
-<br>
-<img src="{{ site.url }}{{ site.baseurl }}/assets/det_pipeline.png"/>
-<br>
+## Technical Implementation
 
-### software
-The software of this project can be explained in two stages based on the two ROS nodes I have in the project:
-* Inference server
-* Perception core
+### Hardware Setup
+- STM32F407G-DISC1 development board
+- USB-UART serial communication (PA2/PA3)
+- Logitech C920 Webcam
+- MATLAB for frame capture/display
 
-**Inference server**<br>
-The inference server is a ROS node that runs a deep learning model (CNN) to detect objects in the image space. The inference server is implemented in Python using [Detectron2](https://github.com/facebookresearch/detectron2) and Pytorch as the deep learning framework. For the use case of this project, a custom dataset is created to train the model. Mask-RCNN is used as the model architecture since we need to implement instance segmentation. The model was then trained with 100 self-labeled images with an ontology of a "cheez-it" box. The labeled images are shown below:
-<br>
-<img src="{{ site.url }}{{ site.baseurl }}/assets/annotation_results.gif"/>
-<br>
-The images are annotated on an open-sourced platform, [CVAT](https://github.com/opencv/cvat). CVAT provides many tools to accelerate the labeling processes and improve the qualities, such as machine learning models. 
-<br>
-The model was then trained using Detectron2 with 100 labeled images. The inference results are shown below:
-<br>
-<img src="{{ site.url }}{{ site.baseurl }}/assets/instance_segmentation.gif"/>
-<br>
-The inference server subscribes to the image topic and computes the target object masks. The inference server then publishes the masks to the perception core node.
+### Core Algorithms
+#### 1. Thresholding Techniques
+**Global Thresholding (C Implementation):**
 
-**Perception core**<br>
-The perception core is a ROS node that performs the following tasks:
-* Receives both the point cloud from the LiDAR and the image from the RGB camera
-* Detects the table in point cloud data and removes it
-* Denoises, downsamples, and clusters the point cloud data to create a foreground mask
-* Receives the target object masks from the inference server and gets a inference mask
-* merge the foreground mask and the inference mask to get a final mask
-* Performs oriented bounding box detection and pose estimation on the final mask with a state machine
-
-The perception core is implemented in C++ using ROS. The node uses PCL for the point cloud process and OpenCV for the image process. The organized point cloud acquired from the realsense Lidar helped significantly reduce the perception core's runtime. The algorithms in the node were implemented to keep the organized point cloud using a customized data structure, **OrderedCloud**. Moreover, some algorithms were implemented in image space to reduce the runtime, such as **denoise**, **downsample**, and **cluster**. As a result, the node can be run efficiently with real-time performance. A state machine controls the detection and pose estimation processes based on the motion in the image space.
-
-The below image shows the table removal process:
-<br>
-<img src="{{ site.url }}{{ site.baseurl }}/assets/background_remover.gif"/>
-<br>
-
-The below image shows the colorized point cloud clusters after denoising, downsampling, and clustering:
-<br>
-<img src="{{ site.url }}{{ site.baseurl }}/assets/cluster.gif"/>
-<br>
-
-The below image shows the CAD model replacement of the target objects:
-<br>
-<img src="{{ site.url }}{{ site.baseurl }}/assets/detection.gif"/>
-<br>
+void global_thresholding_c(uint8_t *x, uint32_t size, uint8_t threshold) {
+for(int i=0;i<size;i++) {
+x[i] = (x[i] >= threshold) ? 255 : 0;
+}
+}
 
 
-### Future Scope 
-* Implement a faster CNN model for instance segmentation such as [YOLACT-EDGE](https://github.com/haotian-liu/yolact_edge) to reduce the inference time
-* Annotate more images to train a more robust and accurate model
-* Annotate the model based on the cropped images to reduce the inference time
-* Call the inference server with cropped images to reduce the inference time
-* Implement a more robust and accurate pose estimation algorithm, such as point cloud registration
-* Multi-thread CPU implementation on the perception core node to reduce the runtime
-* Implement some OpenCV and PCL algorithms in GPU to reduce the runtime
+**Band Thresholding (Hybrid Assembly):**
+attribute((naked)) void band_thresholding_hybrid(...) {
+__asm volatile(
+"PUSH {r4-r7,lr}\n\t"
+"MOV r4, #0\n\t"
+"loop: CMP r4,r1\n\t"
+"BGE exit\n\t"
+"LDRB r7,[r0]\n\t"
+"CMP r7,r3\n\t"
+"BGT loop1\n\t"
+"CMP r2,r7\n\t"
+"BGT loop1\n\t"
+"STRB r5,[r0], #1\n\t"
+"B loop2\n\t"
+// ... full assembly implementation
+);
+
+
+
+#### 2. Gray Level Quantization
+**C Function with Right-Shift Optimization:**
+void gray_level_quantization_c(uint8_t *x, uint32_t size, uint8_t shift_factor) {
+for(int i=0;i<size;i++) {
+x[i] = x[i] >> shift_factor;
+}
+}
+
+
+#### 3. Advanced Transformations
+**Negative Transformation (Hybrid Assembly):**
+
+attribute((naked)) void gray_level_transformation1_hybrid(...) {
+__asm volatile(
+"MOV r2,#0\n\t"
+"MOV r3,#255\n\t"
+"loopgl: LDRB r4,[r0]\n\t"
+"SUB r4,r3,r4\n\t"
+"STRB r4,[r0],#1\n\t"
+// ... full assembly implementation
+);
+}
+
+
+### Key Results
+**Semi-Thresholding Hybrid Implementation:**
+![Semi-thresholding Result](https://cdn.mathpix.com/cropped/2025_03_17_df6caa1ae553a0ee72dfg-01.jpg)
+
+**Gray Level Quantization:**
+![Quantization Result](https://cdn.mathpix.com/cropped/2025_03_17_df6caa1ae553a0ee72dfg-02.jpg)
+
+**Transformation Pipeline:**
+graph TD
+A[Webcam Capture] --> B[Serial Transmission]
+B --> C[STM32 Processing]
+C --> D[MATLAB Reconstruction]
+D --> E[Quality Analysis]
+
+
+## Technical Highlights
+- **Hybrid Optimization:** Critical functions implemented in ARM assembly with cycle-counted loops
+- **Real-Time Constraints:** Achieved 30FPS processing at 320×240 resolution
+- **MATLAB Integration:** Custom serial protocol for frame-by-frame analysis
+- **Dynamic Thresholding:** Adaptive T-value selection based on histogram analysis
+
+## Development Tools
+- STM32CubeIDE v2.8
+- MATLAB R2024a with Image Processing Toolbox
+- ARM Cortex-M4 Assembly
+- CH340 Serial Drivers
+
+
+
