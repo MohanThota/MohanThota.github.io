@@ -1,7 +1,7 @@
 ---
 name: Real Time Implementation of Image Processing Algorithms
 tools: [C++, Armv7, Assembly language, STM32, MATLAB]
-image: https://jiasenzheng.github.io/assets/detection.gif
+image: https://MohanThota.github.io/assets/STM32.mp4
 description: Implemented real-time image processing algorithms on STM32F407G-DISC1 microcontroller for live video enhancement.
 ---
 
