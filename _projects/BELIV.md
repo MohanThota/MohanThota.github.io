@@ -1,6 +1,6 @@
 ---
-name: SCENARIO BASED TESTING USING CARLA-ROS-AUTOWARE 
-tools: [ROS, AUTOWARE, CARLA , SCNEARIO RUNNER]
+name: Scenario based testing using CARLA ROS AUTOWARE  
+tools: [ROS2, AUTOWARE, CARLA , Scenario Runner]
 image: https://jiasenzheng.github.io/assets/closure1.gif
 description: Developed a calibration ROS package to compute the extrinsic parameters between a LiDar and an RGB-D camera.    Performed 3D SLAM using RTAB-Map on a Jackal UGV and aligned the color pixel to the point cloud.
 ---
