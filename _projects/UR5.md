@@ -26,8 +26,13 @@ I got certification form Universal Robots online course on how to handle the UR5
     target="_blank"
     class="align-middle link-primary mr-2 mr-lg-0 ml-lg-2"
     href="/assets/UR5.pdf"
-    >Resume.pdf</a
+    >UR.pdf</a
   >
 </li>
 <br>
 <object data="{{ site.url }}{{ site.baseurl }}/assets/UR5.pdf" width="1200" height="1200" type="application/pdf"></object>
+
+<br>
+### UR5 Palletizing demo
+{% include elements/video.html id="2i1nyRevbJE" %}
+<br>
