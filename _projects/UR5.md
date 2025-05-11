@@ -1,7 +1,7 @@
 ---
 name: Palletizing using Universal Robot 
 tools: [C++, ROS, 3D SLAM, Calibration, PCL]
-image: https://jiasenzheng.github.io/assets/task4 (2).gif
+image: https://jiasenzheng.github.io/assets/ur5_.gif
 description: Offline and Online coding of industrial robot.
 ---
 ## Project Overview
