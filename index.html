@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mohan Thota — Robotics Engineer · ROS2 · Autonomous Systems</title>
-  <meta name="description" content="Portfolio of Venkata Seetha Ram Mohan Thota — Robotics Engineer at Hitachi America Ltd. (M.S., Arizona State University). ROS2, Python, C++, autonomous-vehicle simulation, vehicle dynamics, and embedded systems. Co-author at IEEE IV 2026." />
+  <meta name="description" content="Portfolio of Venkata Seetha Ram Mohan Thota — Robotics Engineer (M.S., Arizona State University). ROS2, Python, C++, autonomous-vehicle simulation, vehicle dynamics, and embedded systems. Co-author at IEEE IV 2026." />
   <meta name="author" content="Venkata Seetha Ram Mohan Thota" />
-  <meta name="theme-color" content="#0b1020" />
+  <meta name="theme-color" content="#f5f7fb" />
 
   <!-- Open Graph / social previews -->
   <meta property="og:type" content="website" />
@@ -27,22 +27,22 @@
   <style>
     /* -------- design tokens -------- */
     :root {
-      --bg: #0b1020;
-      --bg-elev: #111733;
-      --bg-elev-2: #161e3f;
-      --line: #232b50;
-      --text: #e6ecff;
-      --text-dim: #a6b0d6;
-      --text-mute: #7a85af;
-      --accent: #5eead4;
-      --accent-2: #818cf8;
-      --accent-3: #fbbf24;
-      --accent-glow: rgba(94, 234, 212, 0.18);
-      --indigo-glow: rgba(129, 140, 248, 0.18);
-      --amber-glow: rgba(251, 191, 36, 0.18);
+      --bg: #f5f7fb;
+      --bg-elev: #ffffff;
+      --bg-elev-2: #eef2f9;
+      --line: #e3e8f1;
+      --text: #0f1a33;
+      --text-dim: #48526b;
+      --text-mute: #6b7488;
+      --accent: #4f46e5;
+      --accent-2: #0d9488;
+      --accent-3: #b45309;
+      --accent-glow: rgba(79, 70, 229, 0.10);
+      --indigo-glow: rgba(13, 148, 136, 0.10);
+      --amber-glow: rgba(180, 83, 9, 0.12);
       --radius: 14px;
       --radius-lg: 22px;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
       --max: 1120px;
       --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
       --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -59,8 +59,8 @@
       font-size: 16px;
       overflow-x: hidden;
       background-image:
-        radial-gradient(1200px 600px at 80% -10%, rgba(129, 140, 248, 0.18), transparent 60%),
-        radial-gradient(900px 500px at -10% 10%, rgba(94, 234, 212, 0.12), transparent 60%);
+        radial-gradient(1200px 600px at 80% -10%, rgba(79, 70, 229, 0.06), transparent 60%),
+        radial-gradient(900px 500px at -10% 10%, rgba(13, 148, 136, 0.05), transparent 60%);
       background-attachment: fixed;
     }
 
@@ -76,7 +76,7 @@
       position: sticky; top: 0; z-index: 50;
       backdrop-filter: saturate(140%) blur(12px);
       -webkit-backdrop-filter: saturate(140%) blur(12px);
-      background: rgba(11, 16, 32, 0.75);
+      background: rgba(255, 255, 255, 0.72);
       border-bottom: 1px solid var(--line);
     }
     .nav-inner {
@@ -101,7 +101,7 @@
     }
     .nav-links a:hover { color: var(--text); background: var(--bg-elev); }
     .nav-cta {
-      background: var(--accent); color: #0b1020 !important;
+      background: var(--accent); color: #ffffff !important;
       padding: 8px 14px !important; border-radius: 10px;
       font-weight: 600;
     }
@@ -136,7 +136,7 @@
       font-family: var(--font-mono); font-size: 13px;
       color: var(--text-dim);
       padding: 6px 12px; border: 1px solid var(--line);
-      border-radius: 999px; background: rgba(255,255,255,0.02);
+      border-radius: 999px; background: rgba(15,23,42,0.02);
       margin-bottom: 24px;
     }
     .hero-eyebrow .pulse {
@@ -145,9 +145,9 @@
       animation: pulse 2s infinite;
     }
     @keyframes pulse {
-      0%   { box-shadow: 0 0 0 0 rgba(94,234,212,.5); }
-      70%  { box-shadow: 0 0 0 10px rgba(94,234,212,0); }
-      100% { box-shadow: 0 0 0 0 rgba(94,234,212,0); }
+      0%   { box-shadow: 0 0 0 0 rgba(79,70,229,.5); }
+      70%  { box-shadow: 0 0 0 10px rgba(79,70,229,0); }
+      100% { box-shadow: 0 0 0 0 rgba(79,70,229,0); }
     }
     .hero h1 {
       font-size: clamp(36px, 6vw, 64px);
@@ -178,8 +178,8 @@
       transition: transform .15s ease, background .2s ease, border-color .2s ease, color .2s ease;
     }
     .btn:hover { transform: translateY(-1px); }
-    .btn-primary { background: var(--accent); color: #0b1020; }
-    .btn-primary:hover { background: var(--text); color: #0b1020; }
+    .btn-primary { background: var(--accent); color: #ffffff; }
+    .btn-primary:hover { background: var(--text); color: #ffffff; }
     .btn-ghost { background: transparent; border-color: var(--line); color: var(--text); }
     .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
     .btn svg { width: 16px; height: 16px; }
@@ -196,7 +196,7 @@
     .portrait img { width: 100%; height: 100%; object-fit: cover; }
     .portrait-glow {
       position: absolute; inset: -30px;
-      background: conic-gradient(from 200deg, rgba(94,234,212,.35), rgba(129,140,248,.25), transparent 60%);
+      background: conic-gradient(from 200deg, rgba(79,70,229,.35), rgba(13,148,136,.25), transparent 60%);
       filter: blur(40px); z-index: -1; border-radius: 50%;
     }
     .portrait-badge {
@@ -217,8 +217,8 @@
     }
     .pub-card {
       display: flex; align-items: center; gap: 20px;
-      background: linear-gradient(135deg, rgba(251,191,36,.10), rgba(129,140,248,.08));
-      border: 1px solid rgba(251,191,36,.25);
+      background: linear-gradient(135deg, rgba(180,83,9,.10), rgba(13,148,136,.08));
+      border: 1px solid rgba(180,83,9,.25);
       border-radius: var(--radius-lg);
       padding: 18px 22px;
     }
@@ -234,8 +234,8 @@
     .pub-card h3 .tag-pub {
       font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em;
       text-transform: uppercase;
-      background: rgba(251,191,36,.18); color: var(--accent-3);
-      padding: 3px 8px; border-radius: 999px; border: 1px solid rgba(251,191,36,.3);
+      background: rgba(180,83,9,.18); color: var(--accent-3);
+      padding: 3px 8px; border-radius: 999px; border: 1px solid rgba(180,83,9,.3);
     }
     .pub-card p { margin: 4px 0 0; font-size: 14px; color: var(--text-dim); }
 
@@ -272,7 +272,7 @@
       width: 12px; height: 12px; border-radius: 50%;
       background: var(--bg);
       border: 2px solid var(--accent);
-      box-shadow: 0 0 0 4px rgba(94,234,212,.08);
+      box-shadow: 0 0 0 4px rgba(79,70,229,.08);
     }
     .tl-item.current::before {
       background: var(--accent);
@@ -287,7 +287,7 @@
       letter-spacing: .1em; text-transform: uppercase;
       color: var(--accent); background: var(--accent-glow);
       padding: 2px 8px; border-radius: 999px;
-      border: 1px solid rgba(94,234,212,.3);
+      border: 1px solid rgba(79,70,229,.3);
     }
     .tl-item .meta {
       display: flex; flex-wrap: wrap; gap: 8px 14px;
@@ -313,12 +313,12 @@
     }
     .project:hover {
       transform: translateY(-4px);
-      border-color: rgba(94, 234, 212, .35);
-      box-shadow: 0 20px 40px rgba(0,0,0,.35);
+      border-color: rgba(79, 70, 229, .35);
+      box-shadow: 0 20px 40px rgba(15,23,42,.12);
     }
     .project-media {
       position: relative; aspect-ratio: 16 / 9;
-      background: #06091a;
+      background: #dfe4ee;
       overflow: hidden;
       border-bottom: 1px solid var(--line);
     }
@@ -340,15 +340,15 @@
     }
     /* gradient placeholder for projects without video */
     .project-media.glyph {
-      background: radial-gradient(circle at 30% 30%, rgba(94,234,212,.18), transparent 60%),
-                  radial-gradient(circle at 70% 70%, rgba(129,140,248,.18), transparent 60%),
-                  #0c1228;
+      background: radial-gradient(circle at 30% 30%, rgba(79,70,229,.18), transparent 60%),
+                  radial-gradient(circle at 70% 70%, rgba(13,148,136,.18), transparent 60%),
+                  #eef2f9;
       display: grid; place-items: center;
     }
     .project-media.glyph .glyph-icon {
       width: 96px; height: 96px; color: var(--accent);
       opacity: .85;
-      filter: drop-shadow(0 10px 30px rgba(94,234,212,.25));
+      filter: drop-shadow(0 10px 30px rgba(79,70,229,.25));
     }
     .project-body { padding: 22px 22px 24px; flex: 1; display: flex; flex-direction: column; }
     .project-body h3 { font-size: 19px; margin: 0 0 6px; }
@@ -359,12 +359,12 @@
     .tag {
       font-family: var(--font-mono); font-size: 11.5px;
       color: var(--text-dim);
-      background: rgba(255,255,255,0.03);
+      background: rgba(15,23,42,0.03);
       border: 1px solid var(--line);
       padding: 3px 9px; border-radius: 999px;
     }
-    .tag.accent { color: var(--accent); border-color: rgba(94,234,212,.3); background: var(--accent-glow); }
-    .tag.amber { color: var(--accent-3); border-color: rgba(251,191,36,.3); background: var(--amber-glow); }
+    .tag.accent { color: var(--accent); border-color: rgba(79,70,229,.3); background: var(--accent-glow); }
+    .tag.amber { color: var(--accent-3); border-color: rgba(180,83,9,.3); background: var(--amber-glow); }
     .project-link {
       position: absolute; inset: 0; z-index: 2;
       text-indent: -9999px; overflow: hidden;
@@ -389,7 +389,7 @@
     .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
     .chip {
       font-size: 13.5px; color: var(--text);
-      background: rgba(255,255,255,0.03);
+      background: rgba(15,23,42,0.03);
       border: 1px solid var(--line);
       padding: 6px 12px; border-radius: 8px;
     }
@@ -397,7 +397,7 @@
     /* -------- contact -------- */
     .contact-card {
       margin-top: 36px;
-      background: linear-gradient(135deg, rgba(94,234,212,.08), rgba(129,140,248,.08));
+      background: linear-gradient(135deg, rgba(79,70,229,.08), rgba(13,148,136,.08));
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
       padding: 40px;
@@ -504,7 +504,7 @@
     <!-- ======================== HERO ======================== -->
     <section class="hero" aria-labelledby="hero-title">
       <div>
-        <span class="hero-eyebrow"><span class="pulse"></span> Robotics Engineer @ Hitachi · Santa Clara, CA</span>
+        <span class="hero-eyebrow"><span class="pulse"></span> Robotics Engineer · ROS2 &amp; Autonomous Systems · Santa Clara, CA</span>
         <h1 id="hero-title">
           Hi, I'm Mohan —<br />
           I build <span class="accent">autonomous systems</span> that ship to&nbsp;production.
@@ -593,9 +593,9 @@
             NIT Andhra Pradesh.
           </p>
           <p>
-            At Hitachi America, I'm building control systems on WAGO field couplers,
-            wiring real-time monitoring dashboards over MQTT and Node-RED, and
-            applying the Model Context Protocol (MCP) with Gemini agents and A2A
+            At Hitachi America, I built control systems on WAGO field couplers,
+            wired real-time monitoring dashboards over MQTT and Node-RED, and
+            applied the Model Context Protocol (MCP) with Gemini agents and A2A
             orchestration to enhance quality-control processes.
           </p>
           <p>
@@ -612,7 +612,7 @@
             <span class="ico" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </span>
-            <div><h4>Currently</h4><p>PLC Engineer at Hitachi America Ltd. — control systems, MQTT, Node-RED, MCP / agentic orchestration.</p></div>
+            <div><h4>Most recent</h4><p>PLC Engineer at Hitachi America Ltd. — control systems, MQTT, Node-RED, MCP / agentic orchestration.</p></div>
           </div>
           <div class="fact">
             <span class="ico" aria-hidden="true">
@@ -637,9 +637,9 @@
       <p class="section-lede">Industrial automation, autonomous-vehicle research, and teaching across labs and companies.</p>
 
       <div class="timeline">
-        <div class="tl-item current">
-          <h3>PLC Engineer — Hitachi America Ltd. <span class="badge-now">Now</span></h3>
-          <div class="meta"><span>March 2026 — Present</span><span>Santa Clara, CA</span></div>
+        <div class="tl-item">
+          <h3>PLC Engineer — Hitachi America Ltd.</h3>
+          <div class="meta"><span>March 2026 — May 2026</span><span>Santa Clara, CA</span></div>
           <ul>
             <li>Developed a control system in Python on WAGO field couplers to automate Fischertechnik devices over MQTT.</li>
             <li>Built a real-time monitoring dashboard in MQTT + Node-RED for system visibility and control.</li>
@@ -986,7 +986,7 @@
         <div>
           <h2 style="margin-bottom:14px;">Always open to interesting robotics &amp; AV conversations.</h2>
           <p>
-            I currently work at Hitachi America in Santa Clara, but I'm happy to chat
+            I'm a robotics engineer based in Santa Clara, and I'm always happy to chat
             about robotics, autonomous vehicles, controls, and industrial automation.
             Email is the fastest way to reach me — I usually reply within a day.
           </p>
