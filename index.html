@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mohan Thota — Robotics Engineer · ROS2 · Autonomous Systems</title>
-  <meta name="description" content="Portfolio of Venkata Seetha Ram Mohan Thota — Robotics Engineer (M.S., Arizona State University). ROS2, Python, C++, autonomous-vehicle simulation, vehicle dynamics, and embedded systems. Co-author at IEEE IV 2026." />
+  <meta name="description" content="Portfolio of Venkata Seetha Ram Mohan Thota — Robotics Engineer (M.S., Arizona State University). ROS2, Python, C++, humanoid RL, autonomous-vehicle simulation, vehicle dynamics, and embedded systems. Co-author at IEEE IV 2026." />
   <meta name="author" content="Venkata Seetha Ram Mohan Thota" />
   <meta name="theme-color" content="#f5f7fb" />
 
   <!-- Open Graph / social previews -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Mohan Thota — Robotics Engineer" />
-  <meta property="og:description" content="ROS2, Python, C++. Autonomous-vehicle simulation, vehicle dynamics, and industrial automation. Co-author at IEEE IV 2026." />
+  <meta property="og:description" content="ROS2, Python, C++. Humanoid RL deployment, autonomous-vehicle simulation, and industrial automation. Co-author at IEEE IV 2026." />
   <meta property="og:image" content="images/headshot.jpg" />
   <meta property="og:url" content="https://mohanthota.github.io/" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -350,6 +350,14 @@
       opacity: .85;
       filter: drop-shadow(0 10px 30px rgba(79,70,229,.25));
     }
+    /* two-image cross-fade for cards without a video */
+    .project-media.duo img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .project-media.duo .img-b { opacity: 0; transition: opacity .45s ease; }
+    .project:hover .project-media.duo .img-b,
+    .project:focus-within .project-media.duo .img-b { opacity: 1; }
     .project-body { padding: 22px 22px 24px; flex: 1; display: flex; flex-direction: column; }
     .project-body h3 { font-size: 19px; margin: 0 0 6px; }
     .project-body h3 a { color: var(--text); }
@@ -454,6 +462,7 @@
       .reveal { opacity: 1; transform: none; }
       html { scroll-behavior: auto; }
       .pulse, .tl-item.current::before { animation: none; }
+      .project-media.duo .img-b { transition: none; }
     }
 
     /* -------- responsive -------- */
@@ -513,7 +522,8 @@
           Robotics Engineer working on industrial automation at Hitachi America.
           M.S. in Robotics &amp; Autonomous Systems from Arizona State University,
           with hands-on experience designing ROS2 software stacks, integrating
-          software–hardware components, and validating autonomous-vehicle pipelines.
+          software–hardware components, validating autonomous-vehicle pipelines,
+          and deploying learned control on legged robots.
           Co-author at <strong style="color:var(--accent-3)">IEEE IV 2026</strong>.
         </p>
         <div class="hero-meta">
@@ -602,9 +612,11 @@
             Before that, I spent 18 months at ASU's BELIV lab building scenario-based
             tests for autonomous vehicles in CARLA-ROS-Autoware — work that turned
             into a co-authored paper at <strong style="color:var(--text)">IEEE IV 2026</strong>
-            on real-time DDT assessment aligned with SAE J3237. I care about safety
-            standards (ISO 26262 / 21448 / 34502, SAE J3016 / J3237), clean simulation
-            pipelines, and writing code that someone else can debug at 2am.
+            on real-time DDT assessment aligned with SAE J3237. More recently I've been
+            working on learned control for legged robots, taking a reinforcement-learning
+            locomotion policy from MuJoCo onto a Booster Robotics K1 humanoid.
+            I care about safety standards (ISO 26262 / 21448 / 34502, SAE J3016 / J3237),
+            clean simulation pipelines, and writing code that someone else can debug at 2am.
           </p>
         </div>
         <div class="quick-facts">
@@ -618,13 +630,13 @@
             <span class="ico" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             </span>
-            <div><h4>Focus</h4><p>ROS2 software stacks, autonomous-vehicle simulation, vehicle dynamics &amp; control, industrial automation.</p></div>
+            <div><h4>Focus</h4><p>ROS2 software stacks, humanoid RL &amp; sim-to-real, autonomous-vehicle simulation, vehicle dynamics &amp; control.</p></div>
           </div>
           <div class="fact">
             <span class="ico" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20l9-9-9-9-9 9 9 9z"/><path d="M3 11l9 9 9-9"/></svg>
             </span>
-            <div><h4>Stack</h4><p>Python, C++, MATLAB, ROS1/2, MCP, CARLA, Autoware, Gazebo, Isaac Sim, Simulink, CarSIM, VI-CarRealTime.</p></div>
+            <div><h4>Stack</h4><p>Python, C++, MATLAB, ROS1/2, MCP, MuJoCo, PyTorch, CARLA, Autoware, Gazebo, Isaac Sim, Simulink, CarSIM.</p></div>
           </div>
         </div>
       </div>
@@ -707,6 +719,27 @@
       <p class="section-lede">Hover any card to preview the demo, or click through for the full video walkthrough.</p>
 
       <div class="projects-grid">
+
+        <!-- 0. Booster K1 humanoid — RL locomotion, sim2real -->
+        <article class="project">
+          <a class="project-link" href="#" aria-label="Booster K1 humanoid RL locomotion project">Project details</a>
+          <div class="project-media duo">
+            <img src="images/thumbs/booster/booster_mujoco_1.jpg" alt="Booster K1 humanoid walking in MuJoCo, reference motion overlaid in green" loading="lazy" />
+            <img class="img-b" src="images/thumbs/booster/booster_mujoco_2.jpg" alt="Booster K1 humanoid mid-stride in MuJoCo, tracking the reference motion" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <h3>RL Locomotion Policy on a Booster K1 Humanoid</h3>
+            <p>Trained and deployed a reinforcement-learning locomotion policy on a Booster Robotics K1 humanoid through the booster_deploy stack. Validated in MuJoCo on ROS 2 Humble — green reference motion tracked against the simulated robot — then ran the same policy sim-to-real on the physical K1, collecting run data to evaluate tracking error and gait stability on hardware.</p>
+            <div class="tags">
+              <span class="tag amber">Sim2Real</span>
+              <span class="tag accent">Reinforcement Learning</span>
+              <span class="tag">MuJoCo</span>
+              <span class="tag">Humanoid</span>
+              <span class="tag">ROS 2 Humble</span>
+              <span class="tag">Booster K1</span>
+            </div>
+          </div>
+        </article>
 
         <!-- 1. Hitachi industrial automation -->
         <article class="project">
@@ -921,6 +954,7 @@
             <span class="chip">Autoware</span>
             <span class="chip">Isaac Sim</span>
             <span class="chip">MuJoCo</span>
+            <span class="chip">PyTorch</span>
             <span class="chip">Unreal Engine</span>
           </div>
         </div>
