@@ -605,7 +605,9 @@
             into a co-authored paper at <strong style="color:var(--text)">IEEE IV 2026</strong>
             on real-time DDT assessment aligned with SAE J3237. More recently I've been
             working on learned control for legged robots, taking a reinforcement-learning
-            locomotion policy from MuJoCo onto a Booster Robotics K1 humanoid.
+            locomotion policy from MuJoCo onto a Booster Robotics K1 humanoid,
+            and running VR teleoperation on a Unitree G1 to collect bimanual
+            demonstration data for imitation learning.
             I care about safety standards (ISO 26262 / 21448 / 34502, SAE J3016 / J3237),
             clean simulation pipelines, and writing code that someone else can debug at 2am.
           </p>
@@ -711,7 +713,30 @@
 
       <div class="projects-grid">
 
-        <!-- 0. Booster K1 humanoid — RL locomotion, sim2real -->
+        <!-- 0. Unitree G1 — VR teleoperation & bimanual data collection -->
+        <article class="project">
+          <a class="project-link" href="https://youtu.be/MKvJUnlY0tM" target="_blank" rel="noopener">Watch on YouTube</a>
+          <div class="project-media">
+            <video class="hover-video" muted loop playsinline preload="metadata" poster="images/thumbs/g1teleop/g1_poster.jpg">
+              <source src="images/thumbs/g1teleop/g1_teleop.webm" type="video/webm" />
+            </video>
+            <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="project-body">
+            <h3><a href="https://youtu.be/MKvJUnlY0tM" target="_blank" rel="noopener">VR Teleoperation of a Unitree G1 Humanoid</a></h3>
+            <p>Bimanual teleoperation of a Unitree G1 EDU using a Meta Quest 3, running on Dimensional OS. Handled full hardware bringup — Ethernet/WiFi and SSH access, CycloneDDS transport, sport-mode balance initialization, and onboard blueprints — then operated the robot in VR to collect bimanual demonstration episodes for imitation learning.</p>
+            <div class="tags">
+              <span class="tag amber">Teleoperation</span>
+              <span class="tag accent">Unitree G1</span>
+              <span class="tag">Meta Quest 3</span>
+              <span class="tag">Dimensional OS</span>
+              <span class="tag">Humanoid</span>
+              <span class="tag">Imitation Learning</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 1. Booster K1 humanoid — RL locomotion, sim2real -->
         <article class="project">
           <a class="project-link" href="https://youtu.be/8KdYSYlNYyI" target="_blank" rel="noopener">Watch on YouTube</a>
           <div class="project-media">
@@ -948,6 +973,7 @@
             <span class="chip">Isaac Sim</span>
             <span class="chip">MuJoCo</span>
             <span class="chip">PyTorch</span>
+            <span class="chip">Dimensional OS</span>
             <span class="chip">Unreal Engine</span>
           </div>
         </div>
@@ -989,6 +1015,8 @@
             <span class="chip">STM32Cube IDE</span>
             <span class="chip">URSim</span>
             <span class="chip">Git</span>
+            <span class="chip">Meta Quest 3 / OpenXR</span>
+            <span class="chip">Unitree SDK2</span>
           </div>
         </div>
         <div class="skill-card">
